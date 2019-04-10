@@ -10,11 +10,11 @@ int main()
  scanf("%d",&n);
  printf("\nENTER NUMBER OF RESOURCES AVAILABLE:\n");
  scanf("%d",&r);
- printf("\nENTER INSTANCES FOR EACH RESOURSE:\n");
+ printf("\nENTER AVAILABLE FOR EACH RESOURSE:\n");
  for(i=0;i<r;i++)
  {  
  printf("R%d ",i);
- scanf("%d",&inst[i]);
+ scanf("%d",&avail[i]);
  }
  printf("\nENTER ALLOCATION VALUES\n\n\t");
  for(i=0;i<r;i++)
@@ -44,16 +44,6 @@ for(i=0;i<r;i++)
  {
   scanf("%d",&max[i][j]);
  }
- }
- for(i=0;i<r;i++)
- {
- 	int sum=0;
- 	for(j=0;j<n;j++)
- 	{
- 		sum=sum+alloc[j][i];
-	 }
- 	avail[i]=inst[i]-sum;
- 	//printf("%d",avail[i]);
  }
  printf("\nVALUES OF NEED FOR EACH RESOURCE\n\n\t");
  for(i=0;i<r;i++)
